@@ -1,0 +1,1 @@
+open templates/memes.html
