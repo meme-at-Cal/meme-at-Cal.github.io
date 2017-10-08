@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<title> Berkeley Memes Search </title>
+</head>
+<body style="background-color:black">
+{% if objects %} 
+<form action="." method="POST">
+<select name="choice">
+  <option value="recent">MOST RECENT</option>
+  <option value="popular">MOST POPULAR</option>
+</select>
+<input type="submit" value="Submit">
+</form>
+<br>
+<br>
+<br>
+<center> <h1 style="font-size:60px; center; color: white"> UC Berkeley Memes Search</h1>
+<div class="search-box-wrapper">
+         <form action="." method="POST">
+         <input type="text" name="text1" placeholder="Find some memes!!!" class="search-box-input">
+         <button type="submit" name="my_form"> Search </button>
+    </form>
+         </div>
+</center>
+<br>
+<div class="images">
+{% for object in objects %}
+<center> <img src=object alt='sss'>
+</center>
+<br>
+{% endfor %}
+</div>
+{% else %}
+<form action="." method="POST">
+<select name="choice">
+  <option value="recent">MOST RECENT</option>
+  <option value="popular">MOST POPULAR</option>
+</select>
+<input type="submit" value="Submit">
+</form>
+<center> <h1 style="font-size:60px; center; color: white"> UC Berkeley Memes Search</h1>
+<div class="search-box-wrapper">
+         <form action="." method="POST">
+         <input type="text" name="text1" placeholder="Find some memes!!!" class="search-box-input">
+         <button type="submit" name="my_form"> Search </button>
+    </form>
+         </div>
+<br>
+<br>
+<br>
+<img src={{url_for('static', filename='tenor.gif')}}>
+</center>
+
+{% endif %}
+</body>
+</html>
