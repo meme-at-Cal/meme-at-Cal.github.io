@@ -27,7 +27,7 @@
 <br>
 <div class="images">
 {% for object in objects %}
-<center> <img src=object alt='sss'>
+<center> <img src={{object}} >
 </center>
 <br>
 {% endfor %}
@@ -50,7 +50,6 @@
 <br>
 <br>
 <br>
-<img src={{url_for('static', filename='tenor.gif')}}>
 </center>
 
 {% endif %}

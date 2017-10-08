@@ -152,7 +152,6 @@ def my_form_post():
 			return render_template('memes.html', objects=sortbylikeness())
 	else:
 		text1=request.form['text1']
-		print(search(text1))
 		return render_template('memes.html', objects=search(text1))
 
 if __name__ == '__main__':
