@@ -11,8 +11,8 @@ import time
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-EMAIL = 'nyfkxj@126.com'
-PASSWORD = '3037388NYF'
+EMAIL = '********'
+PASSWORD = '********'
 URL = 'https://en-gb.facebook.com/login/'
 driver = webdriver.Chrome()
 driver.get(URL)
